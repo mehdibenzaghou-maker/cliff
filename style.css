@@ -223,78 +223,84 @@ nav.on{
 .pc-num{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:rgba(255,250,244,.08);flex-shrink:0}
 .pc-name{font-size:.82rem;font-weight:700;color:var(--off)}
 
-/* ── SERVICES ────────────────────────────────────────────────── */
+/* ── SERVICES — Editorial Table ──────────────────────────────── */
 .services{padding:8rem 5%;background:var(--bg1);
   border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.services-top{margin-bottom:5rem;max-width:680px}
+.services-top{margin-bottom:4rem;max-width:680px}
 .services-eyebrow{
   font-family:var(--serif);font-style:italic;font-weight:400;
-  font-size:.95rem;color:var(--flame2);
-  margin-bottom:1.2rem;letter-spacing:.02em;
+  font-size:.95rem;color:var(--flame2);margin-bottom:1rem;letter-spacing:.02em;
 }
 .sec-h2--lg{font-size:clamp(2.8rem,6vw,5rem)}
 .sec-h2 em{
   font-family:var(--serif);font-style:italic;font-weight:500;
   color:var(--flame2);letter-spacing:-.01em;
 }
-.services-sub{font-size:.95rem;color:var(--muted);line-height:1.75;margin-top:1.4rem;max-width:46ch}
+.services-sub{font-size:.95rem;color:var(--muted);line-height:1.75;margin-top:1.2rem;max-width:46ch}
 
-/* Editorial table-style services */
+/* The actual table */
 .services-table{
-  border-top:1px solid var(--line);
+  width:100%;
+  border:1px solid var(--line);
+  background:rgba(38,15,57,.35);
+  overflow:hidden;
+}
+/* Header row */
+.services-table::before{
+  content:'No.   Service   Tagline   Description';
+  display:none; /* placeholder for clarity; real header below */
+}
+.svc-thead{
+  display:grid;
+  grid-template-columns:90px 1.4fr 1.2fr 2fr;
+  gap:0;
+  padding:1.2rem 2rem;
+  border-bottom:1px solid var(--line);
+  background:rgba(255,92,26,.04);
+}
+.svc-thead > div{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-size:.65rem;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--flame);
 }
 .svc-row{
   display:grid;
-  grid-template-columns:80px 1fr 1.4fr;
-  gap:2.5rem;
-  align-items:start;
-  padding:2.6rem 0;
+  grid-template-columns:90px 1.4fr 1.2fr 2fr;
+  gap:0;
+  align-items:center;
+  padding:1.8rem 2rem;
   border-bottom:1px solid var(--line);
-  transition:background .35s,padding .35s;
+  transition:background .35s;
   position:relative;
 }
-.svc-row::before{
-  content:'';position:absolute;left:0;top:0;bottom:0;
-  width:0;background:linear-gradient(90deg, rgba(255,92,26,.07) 0%, transparent 80%);
-  transition:width .5s var(--ease);pointer-events:none;
-}
-.svc-row:hover::before{width:100%}
-.svc-row:hover{padding-left:1.4rem;padding-right:1.4rem}
+.svc-row:last-child{border-bottom:none}
+.svc-row:nth-child(even){background:rgba(255,255,255,.012)}
+.svc-row:hover{background:rgba(255,92,26,.06)}
 .svc-num{
   font-family:'Bebas Neue',sans-serif;
-  font-size:2.4rem;
-  color:rgba(255,92,26,.35);
+  font-size:2.2rem;
+  color:rgba(255,92,26,.5);
   line-height:1;letter-spacing:.04em;
-  border:1px solid rgba(255,92,26,.2);
-  padding:.4rem .9rem;
-  display:inline-block;width:fit-content;
-  transition:all .35s var(--ease);
+  transition:color .3s;
 }
-.svc-row:hover .svc-num{
-  color:var(--flame);
-  border-color:rgba(255,92,26,.6);
-  background:rgba(255,92,26,.05);
-}
+.svc-row:hover .svc-num{color:var(--flame)}
 .svc-label h3{
   font-family:'Cabinet Grotesk',sans-serif;
-  font-size:1.4rem;font-weight:800;letter-spacing:-.015em;
-  line-height:1.1;margin-bottom:.5rem;
-  color:var(--off);
+  font-size:1.05rem;font-weight:800;letter-spacing:-.01em;
+  line-height:1.15;color:var(--off);margin:0;
 }
 .svc-italic{
   font-family:var(--serif);font-style:italic;font-weight:400;
   font-size:.92rem;color:var(--flame2);
-  letter-spacing:.005em;line-height:1.4;
+  line-height:1.4;padding-right:1.5rem;
 }
 .svc-desc{
-  font-size:.88rem;color:var(--muted);line-height:1.75;
-  max-width:44ch;
+  font-size:.85rem;color:var(--muted);line-height:1.65;
 }
 
 /* Elegant italic accents */
 .elegant{
-  font-family:var(--serif);font-style:italic;font-weight:500;
-  letter-spacing:-.005em;
+  font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:-.005em;
 }
 
 /* ── CONTACT ─────────────────────────────────────────────────── */
@@ -352,18 +358,20 @@ footer{padding:2rem 5%;border-top:1px solid var(--line);background:var(--bg1)}
 @supports(padding:max(0px)){
   nav{padding-left:max(5%,env(safe-area-inset-left));padding-right:max(5%,env(safe-area-inset-right))}
 }
-@media(max-width:780px){
+@media(max-width:900px){
+  .svc-thead{display:none}
   .svc-row{
     grid-template-columns:60px 1fr;
-    gap:1.4rem 1.6rem;
-    padding:2rem 0;
+    grid-template-areas:
+      "num label"
+      ".   italic"
+      ".   desc";
+    gap:.5rem 1.2rem;
+    padding:1.6rem 1.2rem;
+    align-items:start;
   }
-  .svc-row:hover{padding-left:0;padding-right:0}
-  .svc-desc{
-    grid-column:1 / -1;
-    padding-left:0;
-    margin-top:.4rem;
-  }
-  .svc-num{font-size:1.8rem;padding:.3rem .7rem}
-  .svc-label h3{font-size:1.2rem}
+  .svc-num{grid-area:num;font-size:1.8rem}
+  .svc-label{grid-area:label}
+  .svc-italic{grid-area:italic;padding-right:0}
+  .svc-desc{grid-area:desc;margin-top:.3rem}
 }
