@@ -14,6 +14,7 @@
   --flame2:#FF7A3D;
   --gold:  #FFD700;
   --nav:   64px;
+  --serif: 'Fraunces', Georgia, serif;
   --ease:  cubic-bezier(.16,1,.3,1);
 }
 
@@ -225,18 +226,76 @@ nav.on{
 /* ── SERVICES ────────────────────────────────────────────────── */
 .services{padding:8rem 5%;background:var(--bg1);
   border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.services-top{margin-bottom:5rem;max-width:640px}
+.services-top{margin-bottom:5rem;max-width:680px}
+.services-eyebrow{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:.95rem;color:var(--flame2);
+  margin-bottom:1.2rem;letter-spacing:.02em;
+}
 .sec-h2--lg{font-size:clamp(2.8rem,6vw,5rem)}
-.services-sub{font-size:.95rem;color:var(--muted);line-height:1.75;margin-top:1.2rem;max-width:46ch}
-.services-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line)}
-.svc{padding:2.6rem 2.2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);
-  display:flex;align-items:flex-start;gap:1.6rem;transition:background .25s}
-.svc:nth-child(2n){border-right:none}
-.svc:nth-child(3),.svc:nth-child(4){border-bottom:none}
-.svc:hover{background:rgba(255,92,26,.04)}
-.svc-n{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:rgba(255,92,26,.3);flex-shrink:0;line-height:1;margin-top:.1rem}
-.svc-body h3{font-size:1.05rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em}
-.svc-body p{font-size:.82rem;color:var(--muted);line-height:1.7}
+.sec-h2 em{
+  font-family:var(--serif);font-style:italic;font-weight:500;
+  color:var(--flame2);letter-spacing:-.01em;
+}
+.services-sub{font-size:.95rem;color:var(--muted);line-height:1.75;margin-top:1.4rem;max-width:46ch}
+
+/* Editorial table-style services */
+.services-table{
+  border-top:1px solid var(--line);
+}
+.svc-row{
+  display:grid;
+  grid-template-columns:80px 1fr 1.4fr;
+  gap:2.5rem;
+  align-items:start;
+  padding:2.6rem 0;
+  border-bottom:1px solid var(--line);
+  transition:background .35s,padding .35s;
+  position:relative;
+}
+.svc-row::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;
+  width:0;background:linear-gradient(90deg, rgba(255,92,26,.07) 0%, transparent 80%);
+  transition:width .5s var(--ease);pointer-events:none;
+}
+.svc-row:hover::before{width:100%}
+.svc-row:hover{padding-left:1.4rem;padding-right:1.4rem}
+.svc-num{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:2.4rem;
+  color:rgba(255,92,26,.35);
+  line-height:1;letter-spacing:.04em;
+  border:1px solid rgba(255,92,26,.2);
+  padding:.4rem .9rem;
+  display:inline-block;width:fit-content;
+  transition:all .35s var(--ease);
+}
+.svc-row:hover .svc-num{
+  color:var(--flame);
+  border-color:rgba(255,92,26,.6);
+  background:rgba(255,92,26,.05);
+}
+.svc-label h3{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-size:1.4rem;font-weight:800;letter-spacing:-.015em;
+  line-height:1.1;margin-bottom:.5rem;
+  color:var(--off);
+}
+.svc-italic{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:.92rem;color:var(--flame2);
+  letter-spacing:.005em;line-height:1.4;
+}
+.svc-desc{
+  font-size:.88rem;color:var(--muted);line-height:1.75;
+  max-width:44ch;
+}
+
+/* Elegant italic accents */
+.elegant{
+  font-family:var(--serif);font-style:italic;font-weight:500;
+  letter-spacing:-.005em;
+}
 
 /* ── CONTACT ─────────────────────────────────────────────────── */
 .contact{padding:8rem 5%;background:var(--bg);overflow:hidden;position:relative}
@@ -292,4 +351,19 @@ footer{padding:2rem 5%;border-top:1px solid var(--line);background:var(--bg1)}
 }
 @supports(padding:max(0px)){
   nav{padding-left:max(5%,env(safe-area-inset-left));padding-right:max(5%,env(safe-area-inset-right))}
+}
+@media(max-width:780px){
+  .svc-row{
+    grid-template-columns:60px 1fr;
+    gap:1.4rem 1.6rem;
+    padding:2rem 0;
+  }
+  .svc-row:hover{padding-left:0;padding-right:0}
+  .svc-desc{
+    grid-column:1 / -1;
+    padding-left:0;
+    margin-top:.4rem;
+  }
+  .svc-num{font-size:1.8rem;padding:.3rem .7rem}
+  .svc-label h3{font-size:1.2rem}
 }
