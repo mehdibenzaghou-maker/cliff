@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#060608">
+<title>Cliff — Web & Tech Agency</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <svg class="cliff-mark" viewBox="0 0 46 58" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 L46,0 L40,13 L15,13 L11,17 L11,41 L15,45 L40,45 L46,58 L0,58 Z" fill="currentColor"/>
+      <rect x="33" y="24" width="5" height="5" fill="#3B82F6"/>
+    </svg>
+    <span class="nav-wordmark"><span class="nav-l">l</span>iff</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#work">Projets</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Démarrer un projet</a>
+  <button class="hamburger" id="burger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <a href="#work" onclick="closeMob()">Projets</a>
+  <a href="#services" onclick="closeMob()">Services</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+</div>
+
+<section class="hero" id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-noise"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span class="dot"></span>Agence Web &amp; Tech &mdash; Algérie</div>
+    <h1 class="hero-title">
+      <span class="ht-line">Nous créons</span>
+      <span class="ht-line ht-italic">des expériences,</span>
+      <span class="ht-line">pas des sites.</span>
+    </h1>
+    <p class="hero-sub">Menus 3D interactifs &middot; Identités animées &middot; Sites franchise &middot; Design mobile-first</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn-primary">Voir nos projets</a>
+      <a href="#contact" class="btn-ghost">Démarrer un projet</a>
+    </div>
+  </div>
+  <div class="hero-ticker">
+    <div class="ticker-inner">
+      <span>Savannah Pizzeria</span><span class="sep">/</span>
+      <span>L&rsquo;Entracte</span><span class="sep">/</span>
+      <span>Les Jumelles</span><span class="sep">/</span>
+      <span>Bab Dzira</span><span class="sep">/</span>
+      <span>Seb&rsquo;s Garden</span><span class="sep">/</span>
+      <span>Latina House</span><span class="sep">/</span>
+      <span>Vibe Bistrot</span><span class="sep">/</span>
+      <span>Maison Le Sept</span><span class="sep">/</span>
+      <span>Le Cinq</span><span class="sep">/</span>
+      <span>Savannah Pizzeria</span><span class="sep">/</span>
+      <span>L&rsquo;Entracte</span><span class="sep">/</span>
+      <span>Les Jumelles</span><span class="sep">/</span>
+      <span>Bab Dzira</span><span class="sep">/</span>
+      <span>Seb&rsquo;s Garden</span><span class="sep">/</span>
+      <span>Latina House</span><span class="sep">/</span>
+      <span>Vibe Bistrot</span><span class="sep">/</span>
+      <span>Maison Le Sept</span><span class="sep">/</span>
+      <span>Le Cinq</span><span class="sep">/</span>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="work-header reveal">
+    <div class="section-label">Nos Réalisations</div>
+    <h2 class="section-title">9 projets.<br>Tous uniques.</h2>
+  </div>
+
+  <div class="featured">
+    <article class="feat-card fc-full reveal">
+      <a href="https://www.savannah-pizzeria.com" target="_blank" class="feat-preview">
+        <iframe src="https://www.savannah-pizzeria.com" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        <div class="feat-overlay"></div>
+        <div class="feat-visit">Visiter <i class="fas fa-arrow-up-right-from-square"></i></div>
+      </a>
+      <div class="feat-info">
+        <div class="feat-num">01</div>
+        <div class="feat-body">
+          <h3 class="feat-name">Savannah Pizzeria</h3>
+          <p class="feat-desc">Franchise de 16 restaurants à travers l'Algérie. Menu 3D interactif, géolocalisation des prix par région, intro animée et identité neon complète.</p>
+          <div class="feat-tags">
+            <span>Franchise</span><span>Menu 3D</span><span>Géolocalisation</span><span>Neon Logo</span><span>16 Villes</span>
+          </div>
+        </div>
+        <a href="https://www.savannah-pizzeria.com" target="_blank" class="feat-link">Voir le site <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <div class="feat-row">
+      <article class="feat-card fc-half reveal">
+        <a href="https://www.lentracte-restaurant.com" target="_blank" class="feat-preview">
+          <iframe src="https://www.lentracte-restaurant.com" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <div class="feat-overlay"></div>
+          <div class="feat-visit">Visiter <i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+        <div class="feat-info">
+          <div class="feat-num">02</div>
+          <div class="feat-body">
+            <h3 class="feat-name">L&rsquo;Entracte</h3>
+            <p class="feat-desc">Restaurant gastronomique noir &amp; or avec menu 3D et sol aquarium animé.</p>
+            <div class="feat-tags"><span>Luxury</span><span>Menu 3D</span><span>Aquarium</span></div>
+          </div>
+          <a href="https://www.lentracte-restaurant.com" target="_blank" class="feat-link">Voir le site <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="feat-card fc-half reveal">
+        <a href="https://www.lesjumellesrestaurant.com" target="_blank" class="feat-preview">
+          <iframe src="https://www.lesjumellesrestaurant.com" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <div class="feat-overlay"></div>
+          <div class="feat-visit">Visiter <i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+        <div class="feat-info">
+          <div class="feat-num">03</div>
+          <div class="feat-body">
+            <h3 class="feat-name">Les Jumelles</h3>
+            <p class="feat-desc">Restaurant moderne avec menu interactif et identité visuelle forte.</p>
+            <div class="feat-tags"><span>Restaurant</span><span>Menu 3D</span></div>
+          </div>
+          <a href="https://www.lesjumellesrestaurant.com" target="_blank" class="feat-link">Voir le site <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+
+    <article class="feat-card fc-full reveal">
+      <a href="https://www.babdzira.net" target="_blank" class="feat-preview">
+        <iframe src="https://www.babdzira.net" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        <div class="feat-overlay"></div>
+        <div class="feat-visit">Visiter <i class="fas fa-arrow-up-right-from-square"></i></div>
+      </a>
+      <div class="feat-info">
+        <div class="feat-num">04</div>
+        <div class="feat-body">
+          <h3 class="feat-name">Bab Dzira</h3>
+          <p class="feat-desc">Restaurant algérien traditionnel revisité avec une expérience web immersive et une identité digitale forte.</p>
+          <div class="feat-tags"><span>Restaurant</span><span>Immersif</span><span>Identité</span></div>
+        </div>
+        <a href="https://www.babdzira.net" target="_blank" class="feat-link">Voir le site <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+  </div>
+
+  <div class="work-more">
+    <div class="work-more-label reveal">Plus de projets</div>
+    <div class="work-grid">
+      <article class="grid-card reveal">
+        <a href="https://www.sebsgarden.com" target="_blank" class="gc-preview">
+          <iframe src="https://www.sebsgarden.com" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <div class="gc-overlay"></div>
+          <div class="gc-visit"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+        <div class="gc-info">
+          <span class="gc-num">05</span>
+          <h3 class="gc-name">Seb&rsquo;s Garden</h3>
+          <div class="gc-tags"><span>Restaurant</span></div>
+        </div>
+      </article>
+      <article class="grid-card reveal">
+        <a href="https://www.latinahouse.it.com" target="_blank" class="gc-preview">
+          <iframe src="https://www.latinahouse.it.com" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <div class="gc-overlay"></div>
+          <div class="gc-visit"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+        <div class="gc-info">
+          <span class="gc-num">06</span>
+          <h3 class="gc-name">Latina House</h3>
+          <div class="gc-tags"><span>Restaurant</span></div>
+        </div>
+      </article>
+      <article class="grid-card reveal">
+        <a href="https://www.vibebistrot.com" target="_blank" class="gc-preview">
+          <iframe src="https://www.vibebistrot.com" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <div class="gc-overlay"></div>
+          <div class="gc-visit"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+        <div class="gc-info">
+          <span class="gc-num">07</span>
+          <h3 class="gc-name">Vibe Bistrot</h3>
+          <div class="gc-tags"><span>Bistrot</span></div>
+        </div>
+      </article>
+      <article class="grid-card reveal">
+        <a href="https://www.maisonlesept.it.com" target="_blank" class="gc-preview">
+          <iframe src="https://www.maisonlesept.it.com" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <div class="gc-overlay"></div>
+          <div class="gc-visit"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+        <div class="gc-info">
+          <span class="gc-num">08</span>
+          <h3 class="gc-name">Maison Le Sept</h3>
+          <div class="gc-tags"><span>Restaurant</span></div>
+        </div>
+      </article>
+      <article class="grid-card reveal">
+        <a href="https://www.lecinqrestaurant.com" target="_blank" class="gc-preview">
+          <iframe src="https://www.lecinqrestaurant.com" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <div class="gc-overlay"></div>
+          <div class="gc-visit"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+        <div class="gc-info">
+          <span class="gc-num">09</span>
+          <h3 class="gc-name">Le Cinq</h3>
+          <div class="gc-tags"><span>Restaurant</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="services-left reveal">
+      <div class="section-label">Ce qu&rsquo;on fait</div>
+      <h2 class="section-title">Des sites qui<br><em>marquent</em><br>les esprits.</h2>
+      <p class="services-text">Spécialisés dans les expériences web pour la restauration &mdash; on maîtrise chaque détail, de l&rsquo;animation d&rsquo;intro jusqu&rsquo;au menu 3D sur mobile.</p>
+      <a href="#contact" class="btn-primary">Démarrer un projet</a>
+    </div>
+    <div class="services-right">
+      <div class="service-item reveal">
+        <div class="si-icon"><i class="fas fa-cube"></i></div>
+        <div class="si-body"><h3>Menu 3D Interactif</h3><p>Chaque plat en 3D temps réel. Compatible AR. Chargement à la demande pour des performances optimales.</p></div>
+      </div>
+      <div class="service-item reveal">
+        <div class="si-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+        <div class="si-body"><h3>Identité Animée</h3><p>Intro canvas, logo LED animé, particules, curseur personnalisé. Une marque qui vit à l&rsquo;écran.</p></div>
+      </div>
+      <div class="service-item reveal">
+        <div class="si-icon"><i class="fas fa-store"></i></div>
+        <div class="si-body"><h3>Sites Franchise Multi-Villes</h3><p>Une page par restaurant, géolocalisation des tarifs, navigation unifiée. Scalable sans limite.</p></div>
+      </div>
+      <div class="service-item reveal">
+        <div class="si-icon"><i class="fas fa-mobile-screen"></i></div>
+        <div class="si-body"><h3>Mobile-First</h3><p>Conçu pour le téléphone d&rsquo;abord. Safe area, touch targets, performance optimisée sur tous les appareils.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-band">
+  <div class="stat-item"><div class="stat-n"><span data-count="9">0</span>+</div><div class="stat-l">Sites livrés</div></div>
+  <div class="stat-item"><div class="stat-n"><span data-count="16">0</span></div><div class="stat-l">Restaurants franchise</div></div>
+  <div class="stat-item"><div class="stat-n"><span data-count="100">0</span>+</div><div class="stat-l">Plats en 3D</div></div>
+  <div class="stat-item"><div class="stat-n"><span data-count="9">0</span></div><div class="stat-l">Wilayas couvertes</div></div>
+</div>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left reveal">
+      <div class="section-label">Travaillons ensemble</div>
+      <h2 class="section-title">Un projet<br>en tête&nbsp;?</h2>
+      <p class="contact-text">On répond rapidement. Dites-nous ce que vous cherchez &mdash; restaurant, franchise, identité visuelle &mdash; on s&rsquo;occupe du reste.</p>
+      <div class="contact-links">
+        <a href="https://wa.me/213558200200" target="_blank" class="contact-cta"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="mailto:cliffagency.dz@gmail.com" class="contact-cta contact-cta--ghost"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </div>
+    <div class="contact-right">
+      <svg class="contact-mark" viewBox="0 0 46 58" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 L46,0 L40,13 L15,13 L11,17 L11,41 L15,45 L40,45 L46,58 L0,58 Z" fill="rgba(255,255,255,0.04)"/>
+        <rect x="33" y="24" width="5" height="5" fill="rgba(59,130,246,0.3)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <svg class="cliff-mark" viewBox="0 0 46 58" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 L46,0 L40,13 L15,13 L11,17 L11,41 L15,45 L40,45 L46,58 L0,58 Z" fill="currentColor"/>
+        <rect x="33" y="24" width="5" height="5" fill="#3B82F6"/>
+      </svg>
+      <span class="nav-wordmark"><span class="nav-l">l</span>iff</span>
+    </div>
+    <p class="footer-copy">&copy; 2025 Cliff Agency &middot; Tous droits réservés</p>
+    <p class="footer-sub">Algérie &middot; Web &amp; Tech</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
